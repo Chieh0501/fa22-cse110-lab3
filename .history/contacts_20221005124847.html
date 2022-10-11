@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="Team 2 Meeting Notes" />
+	<meta name="keywords" content="HTML, CSS, JavaScript" />
+	<meta name="author" content="Chieh-Hsiu Hung" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Team 2 Meeting Notes</title>
+	<link href="images/favicons/favicon.ico" rel="icon" />
+	<!-- <link href="styles/main.css" rel="stylesheet" /> -->
+	<!-- <script>
+		window.addEventListener('load', function () {
+			let time = window.performance.timing,
+				complete = time.domComplete - time.domLoading;
+			document.getElementById('page-load-info').innerHTML = `<strong>Page Loaded in ${parseInt(complete)}ms
+			 on ${new Date().toLocaleString("en-US")}</strong>`;
+		});
+	</script> -->
+	
+</head>
+<body>
+	<header>
+        <img src="images/demo-logo.png" alt="Demo Team Logo">
+        <hr />
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="images.html">Diagrams/Pictures</a>
+            <a href="multimedia.html">Audio/Video Backup</a>
+            <a href="questions.html">Question Board</a>
+            <a href="contacts.html">Contact Me</a>
+        </nav>
+    </header>
+	<main>
+		<h1>Contact</h1>
+		<h3>Please fill out the form below, I will reach back to you as soon as possible</h3>
+		<div class="contactform">
+			<form>
+				<fieldset>
+					<legend>Contact Form:</legend>
+					<label for="first_name">First Name</label>
+					<input type="text" id="first_name" placeholder="Please Enter First Name">
+					<label for="last_name">Last Name</label>
+					<input type="text" id="last_name" placeholder="Please Enter Last Name">
+					<br/>
+					<label for="email">Email</label>
+					<input type="text" id="email" placeholder="Please Enter Email">
+					<br/>
+					<label for="phone">Phone Number</label>
+					<input type="text" id="phone" placeholder="Please Enter Number">		
+					<br/>
+					<label for="message">Message</label>
+					<br/>
+					<textarea id="message" name="message" rows="4" cols="50"></textarea>
+					<br/>
+					<label for="add_info">Additional Information</label>
+					<br/>
+					<textarea id="add_info" name="add_info" rows="4" cols="50"></textarea>
+					<br/>
+					<label for="contact_method">Preferred Contact Method</label>
+					<select  name="contact_method" id="contact_method">
+						<optgroup label="Contact Method">
+						<option value="Call">Call</option>
+						<option value="Texting">Text</option>
+						<option value="mail">Email</option>
+						</optgroup>
+					</select>
+					<br />
+					<label for="time_preferred">Preferred time to be reached:</label>
+					<input list="times_preferred" name="time_preferred" id="time_preferred">
+					<datalist id="times_preferred">
+						<option value="9:00-12:00">
+						<option value="2:00-5:00">
+						<option value="7:00-9:00">
+						<option value="No preference">
+					</datalist>
+					<br />
+					<label for="urgent">Urgent</label>
+					<input type="checkbox" id="urgent" name="urgent" value="Urgent">
+					<label for="nurgent">Not Urgent</label>
+					<input type="checkbox" id="nurgent" name = "nurgent" value="Not Urgent">
+					<input type="submit">
+				</fieldset>
+				<button type="button" onclick="alert('Submitted')">Submit</button>
+			</form>
+		</div>
+	</main>
+	<footer>
+		<hr/>
+		<p>This page was made by <i><b>Chieh-Hsiu Hung</b></i></p>
+		<p>Last Edited on <strong>7/9/2022</strong></p>
+	</footer>
+</body>
+
+</html>
