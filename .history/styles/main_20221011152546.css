@@ -1,0 +1,48 @@
+/* main.css */
+
+html,
+
+:root {
+  --vw-lg: 1920px;
+  --vw-md: 1366px;
+  --vw-sm: 600px;
+  --primary-color: #000000;
+  --secondary-color: #ffffff;
+  --accent-color-1: #CD7F32;
+  --accent-color-2: #969696;
+}
+
+body {
+  background-color: var(--accent-color-2);
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Lato/Lato-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lato";
+  font-weight: bold;
+  font-weight: 400;
+  src: url("../fonts/Lato/Lato-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/Lato/Lato-Italic.ttf") format("truetype");
+}
+/****** header ******/
+
+header {
+
+}
+/****** footer ******/
+footer {
+  font-size: small;
+  text-align: center;
+}
