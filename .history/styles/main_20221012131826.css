@@ -17,10 +17,7 @@ body {
   background-color: var(--primary-color);
   display: block;
   margin: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0;
 }
 @font-face {
   font-family: "Lato";
@@ -55,9 +52,7 @@ header {
   font-family: "Lato", bold;
   background: var(--accent-color-1);
 }
-* {
-  padding: 0px;
-}
+
 #logo {
   margin-left: 1vw;
   float: left;
@@ -84,119 +79,150 @@ header {
 .navBar a:visited{
   color: #000000; 
 }
-/****** general **********/
-section h2{
-  font-size: 1.5vw;
-}
-hr {
-  display: none;
-}
-main {
-  margin: 1vw;
+
+header hr {
+  width: 30%;
 }
 
-/****** home content ******/
-#home_main {
-  display:grid;
-  margin: 1vw;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  text-align: center;
-}
-.title {
-  display:flex;
-  flex-direction: column;
-  margin: 1vw;
-  text-align: center;
-}
-.title h1{
-  float:initial;
-  font-size: 2vw;
-}
-.title h2{
-  float:initial;
-  font-size: 1.5vw;
-}
+/****** hamburger menu ****/
 
-.attendance{
-  grid-row: 1;
-  grid-column: 2;
+#hamburger{
+  display: block;
+  grid-column: 6;
+  position: relative;
+  z-index: 1;
+  user-select: none;
 }
-.attendance ul{
-  background-color: var(--accent-color-1);
-  border: 8px double black;
-  border-radius: 0.25pc;
-  margin: 0 auto;
-  padding: 15pt;
-  text-align: left;
-}
-.brainstorming #subtitle{
+#hamburger a{
+  color: var(--primary-color);
+  text-decoration: none;
   font-weight: bold;
-  font-size: 1vw;
 }
-.brainstorming ol{
-  background-color: var(--accent-color-1);
+#hamburger a:hover{
+  color: var(--accent-color-1);
+}
+
+#hamburger input{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position:absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+#hamburger span{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  grid-column: 6;
+  left: 125px;
+  background: var(--accent-color-2);
+  border-radius: 4px;
+  
+  z-index: 1;
+  
+  transform-origin: 29px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;
+}
+
+#hamburger span:first-child{
+  transform-origin: 0% 0%;
+}
+#hamburger span:nth-last-child(1){
+  transform-origin: 0% 100%;
+}
+#hamburger input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(-45deg) translate(3px, -1px);
+}
+#hamburger input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: scale(0.1, 0.1);
+}
+#hamburger input:checked ~ span:nth-last-child(2)
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(1px, -2px);
+}
+#menu
+{
+  display:none;
+  list-style-type: none;
+  float:right;
+  background-size: cover;
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  z-index: 3;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#hamburger input:checked ~ ul
+{
+  display:block;
+  transform: none;
+}
+#hamburger{
+  display:none;
+}
+#menu{
+  display:none;
+}
+#hamburger input{
+  display:none;
+}
+
+ol { list-style: upper-roman; display: inline-block;}
+/****** main content ******/
+
+main {
+  display:grid;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  text-align: center;
+}
+
+ul {
+  background-color: white;
   border: 8px double black;
   border-radius: 4px;
-  margin: 1vw;
+  margin: 0 auto;
   padding: 20px;
   text-align: left;
 }
 
 ul li {
   margin: 5px;
-  font-weight: bold;
-}
-ol li {
-  margin: 5px;
-  font-weight: bold;
-}
-.urgent p{
-  color: rgb(219, 0, 0);
-  font-size: 2vw;
-  font-weight: bold;
-}
-.last_meeting ul{
-  background-color: var(--accent-color-1);
-  border: 8px double black;
-  border-radius: 0.25pc;
-  margin: 0 auto;
-  padding: 15pt;
-  text-align: left;
-}
-.new_topics ul{
-  background-color: var(--accent-color-1);
-  border: 8px double black;
-  border-radius: 0.25pc;
-  margin: 0 auto;
-  padding: 15pt;
-  text-align: left;
-}
-.summation p{
-  background-color: var(--accent-color-1);
-  border: 8px double black;
-  border-radius: 0.25pc;
-  margin: 0 auto;
-  padding: 15pt;
-  text-align: left;
-  font-weight: bold;
 }
 
-/****** Contact Form *******/
-.contact_main{
-  padding: 20px;
-  display:grid;
-  margin: 1vw;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  text-align: center;
+.short_title{
+  display:none;
+}
+.title {
+  float:initial;
+  grid-row: 2 / span 3;
+  grid-column: 2 / span 4;
+  z-index: 1;
+  font-size: 6vw;
 }
 .contactform{
-  position: sticky;
-  grid-row: 2;
+  position: relative;
+  grid-row: 2 / span 6;
   background-color: var(--secondary-color);
   margin-left: 2vw;
-  grid-column: 2 / span 2;
+  grid-column: 1 / span 2;
   height: auto;
 }
 .contactform label{
@@ -206,10 +232,19 @@ ol li {
 .contactform input[type = text], select, textarea{
   width: 100%;
   padding: 6px;
-  grid-column: 2 / span 2;
+  grid-column: 1 / span 6;
   border: 1px solid var(--accent-color-1);
   border-radius: 6px;
   resize: vertical;
+}
+/******* about main ******/
+main#about_main{
+  display:grid;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  text-align: center;
 }
 /***** Button *******/
 .button{
@@ -284,6 +319,14 @@ ol li {
   .button{
     width: 60vw;
     height: 20vw;
+  }
+  #Contact_Button{
+    grid-row: 3 / span 2;
+    grid-column: 2 / span 6;
+  }
+  #download_resume{
+    grid-row: 6 / span 2;
+    grid-column: 2 / span 6;
   }
   img#logo {
     width: 40vw;

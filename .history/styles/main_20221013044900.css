@@ -184,7 +184,6 @@ ol li {
 
 /****** Contact Form *******/
 .contact_main{
-  padding: 20px;
   display:grid;
   margin: 1vw;
   grid-template-columns: repeat(5, 1fr);
@@ -192,7 +191,7 @@ ol li {
   text-align: center;
 }
 .contactform{
-  position: sticky;
+  position: relative;
   grid-row: 2;
   background-color: var(--secondary-color);
   margin-left: 2vw;
