@@ -55,9 +55,7 @@ header {
   font-family: "Lato", bold;
   background: var(--accent-color-1);
 }
-* {
-  padding: 0px;
-}
+
 #logo {
   margin-left: 1vw;
   float: left;
@@ -90,9 +88,6 @@ section h2{
 }
 hr {
   display: none;
-}
-main {
-  margin: 1vw;
 }
 
 /****** home content ******/
@@ -152,51 +147,15 @@ ol li {
   font-weight: bold;
 }
 .urgent p{
-  color: rgb(219, 0, 0);
-  font-size: 2vw;
-  font-weight: bold;
-}
-.last_meeting ul{
-  background-color: var(--accent-color-1);
-  border: 8px double black;
-  border-radius: 0.25pc;
-  margin: 0 auto;
-  padding: 15pt;
-  text-align: left;
-}
-.new_topics ul{
-  background-color: var(--accent-color-1);
-  border: 8px double black;
-  border-radius: 0.25pc;
-  margin: 0 auto;
-  padding: 15pt;
-  text-align: left;
-}
-.summation p{
-  background-color: var(--accent-color-1);
-  border: 8px double black;
-  border-radius: 0.25pc;
-  margin: 0 auto;
-  padding: 15pt;
-  text-align: left;
-  font-weight: bold;
+  color: red;
 }
 
-/****** Contact Form *******/
-.contact_main{
-  padding: 20px;
-  display:grid;
-  margin: 1vw;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  text-align: center;
-}
 .contactform{
-  position: sticky;
-  grid-row: 2;
+  position: relative;
+  grid-row: 2 / span 6;
   background-color: var(--secondary-color);
   margin-left: 2vw;
-  grid-column: 2 / span 2;
+  grid-column: 1 / span 2;
   height: auto;
 }
 .contactform label{
@@ -206,7 +165,7 @@ ol li {
 .contactform input[type = text], select, textarea{
   width: 100%;
   padding: 6px;
-  grid-column: 2 / span 2;
+  grid-column: 1 / span 6;
   border: 1px solid var(--accent-color-1);
   border-radius: 6px;
   resize: vertical;
@@ -284,6 +243,14 @@ ol li {
   .button{
     width: 60vw;
     height: 20vw;
+  }
+  #Contact_Button{
+    grid-row: 3 / span 2;
+    grid-column: 2 / span 6;
+  }
+  #download_resume{
+    grid-row: 6 / span 2;
+    grid-column: 2 / span 6;
   }
   img#logo {
     width: 40vw;
