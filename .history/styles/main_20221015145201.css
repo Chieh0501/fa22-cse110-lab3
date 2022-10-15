@@ -283,7 +283,7 @@ section.summation p{
 {
   display:none;
   list-style-type: none;
-  float:left;
+  float:center;
   background-size: cover;
   transform-origin: 0% 0%;
   transform: translate(100%, 0);

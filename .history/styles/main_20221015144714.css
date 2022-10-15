@@ -22,9 +22,6 @@ body {
   padding-left: 0;
   padding-right: 0;
 }
-main, footer{
-  margin: 0px;
-}
 @font-face {
   font-family: "Lato";
   font-style: normal;
@@ -217,18 +214,18 @@ section.summation p{
 /****** hamburger menu ****/
 #hamburger{
   display: block;
-  grid-column: 3;
-  position: relative;
+  position: absolute;
+  padding-left: 100vw;
   z-index: 1;
   user-select: none;
 }
 #hamburger a{
-  color: white;
+  color: var(--primary-color);
   text-decoration: none;
   font-weight: bold;
 }
 #hamburger a:hover{
-  color: black;
+  color: var(--accent-color-1);
 }
 
 #hamburger input{
@@ -283,7 +280,7 @@ section.summation p{
 {
   display:none;
   list-style-type: none;
-  float:left;
+  float:right;
   background-size: cover;
   transform-origin: 0% 0%;
   transform: translate(100%, 0);
