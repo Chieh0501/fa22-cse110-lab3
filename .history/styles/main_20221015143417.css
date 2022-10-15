@@ -239,11 +239,6 @@ section.summation p{
     display: flex;
     flex-direction: column;
   }
-  .contact_main{
-    display:flex;
-    flex-direction: column;
-    text-align: center;
-  }
   #home_main h2{
     font-size: 5vw;
   }
@@ -253,6 +248,8 @@ section.summation p{
   .contact_form{
     width: 100vw;
     margin-left: 1vw;
+    grid-column: 1;
+    grid-row: 3;
   }
   .attendance h2 + ul{
     font-size: 2.5vw;
@@ -261,7 +258,7 @@ section.summation p{
     float: none;
     display: none;
   }
-  [attribute=intro]{
+  .title{
     display:none;
   }
   #hamburger{
@@ -271,6 +268,9 @@ section.summation p{
     display: block;
   }
   .contact_main > h3{
+    display: none;
+  }
+  #notice{
     display: none;
   }
   .button{

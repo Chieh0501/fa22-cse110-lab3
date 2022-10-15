@@ -273,6 +273,9 @@ section.summation p{
   .contact_main > h3{
     display: none;
   }
+  #notice{
+    display: none;
+  }
   .button{
     width: 60vw;
     height: 20vw;
